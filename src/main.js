@@ -4,11 +4,7 @@ import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
 
-import { getCategoryAPI } from "@/apis/testApis";
-
-getCategoryAPI().then((res) => {
-  console.log(res);
-});
+import "@/styles/common.scss";
 
 const app = createApp(App);
 
