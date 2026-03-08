@@ -1,9 +1,13 @@
 import httpInstance from "@/utils/http";
 // 获取对应的banner数据
-export const getBannerAPI = () => {
+export const getBannerAPI = (params = {}) => {
+  const { distributionSite = "1" } = params;
   return httpInstance({
     url: "/home/banner",
     method: "GET",
+    params: {
+      distributionSite,
+    },
   });
 };
 

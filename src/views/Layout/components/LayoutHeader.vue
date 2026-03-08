@@ -10,6 +10,8 @@ import { useScroll } from "@vueuse/core";
 // };
 import { useCategoryStore } from "@/stores/category";
 const categoryStore = useCategoryStore();
+// console.log("1111", categoryStore.categoryList);
+
 const { y } = useScroll(window);
 
 // onMounted(() => {
@@ -24,8 +26,11 @@ const { y } = useScroll(window);
         <RouterLink to="/">小兔鲜</RouterLink>
       </h1>
       <ul class="app-header-nav">
+        <li class="home">
+          <RouterLink to="/">首页</RouterLink>
+        </li>
         <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
-          <RouterLink to="/">{{ item.name }}</RouterLink>
+          <RouterLink :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
         </li>
       </ul>
       <div class="search">

@@ -12,20 +12,24 @@ const router = createRouter({
   routes: [
     {
       path: "/",
+      name: "Layout",
       component: Layout,
       children: [
         {
           path: "",
+          name: "Home",
           component: Home,
         },
         {
-          path: "category",
+          path: "category/:id",
+          name: "Category",
           component: Category,
         },
       ],
     },
     {
       path: "/login",
+      name: "Login",
       component: Login,
     },
   ],
