@@ -1,7 +1,7 @@
 <script setup>
 import HomePanel from "./HomePanel.vue";
 import { getGoodsAPI } from "@/apis/home";
-import GoodsItem from "./GoodsIrem.vue";
+import GoodsItem from "./GoodsItem.vue";
 
 import { ref, onMounted } from "vue";
 const goodsProduct = ref([]);
